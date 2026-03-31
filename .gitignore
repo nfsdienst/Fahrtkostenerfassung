@@ -1,16 +1,22 @@
-# Python artifacts
-__pycache__/
-*.py[cod]
-*$py.class
+# Dependencies
+node_modules/
 
-# Virtual environments
-.venv/
-venv/
-ENV/
-env/
+# Build output
+dist/
 
-# SQLite database
-fahrten.db
+# Environment variables
+.env
 
 # macOS
 .DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.vscode/
+
+# Legacy
+fahrten.db
