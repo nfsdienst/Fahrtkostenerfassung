@@ -3,57 +3,44 @@
 Ziel dieses Projekts ist die Erfassung von Fahrten und die Berechnung der Erstattungssumme.
 
 ## Annahmen
-
-Ich gehe als Ausgangspunkt von Python als Basis aus. Falls du eine andere Sprache oder Plattform bevorzugst, passe ich die Struktur sofort an.
+• Python ab 3.11
+• SQLite als lokale Datei fahrten.db
 
 ## Datenmodell
-
-Tabelle fahrt
-
+Tabelle fahrten
 • datum
-
 • start
-
 • ziel
-
 • kilometer
-
 • euro pro kilometer
-
 • betrag
-
 • zweck
-
 • projekt oder kostenstelle
-
 • notiz
-
 • erstellt am
 
-## Funktionen
-
-• add für eine Fahrt
-
-• list für einen Zeitraum oder ein Projekt
-
-• report als Zusammenfassung pro Monat oder Projekt
-
-• export als csv für Steuer oder internen Ausgleich
-
-## Setup lokal
-
+## Installation und Setup
 1. Repository klonen
-
 2. Virtuelle Umgebung erstellen
-
 3. Abhängigkeiten installieren
 
+Python hat keine externen Abhängigkeiten. Du kannst fahrten.py direkt mit Python ausführen.
+
+## Nutzung
+Kommandos
+• add fügt eine Fahrt hinzu
+• list listet Fahrten im Zeitraum
+• report summiert Beträge und Kilometer
+• export exportiert nach CSV
+
+Beispiele
+• python fahrten.py add heute Kassel Frankfurt 200 0.30 --zweck Kundentermin --projekt Kostenstelle 123
+• python fahrten.py list --von 2026-03-01 --bis 2026-03-31
+• python fahrten.py report --monat 2026-03
+• python fahrten.py export fahrten.csv
+
 ## Roadmap
-
-1. Sqlite Datenbank und cli
-
-2. Export und Report
-
-3. Pdf oder Excel Export
-
-4. Weboberfläche optional
+• Filtern nach Projekt oder Kostenstelle
+• Reports je Projekt
+• Export als Excel oder PDF
+• Optional, kleine Weboberfläche
